@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+margin: 0;
+font-family: "Poppins", sans-serif;
+background: #0d0d0d;
+color: #fff;
+}
+
+header{  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px 40px;
+    background: linear-gradient(90deg, #111, #1a1a1a);
+    border-bottom: 2px solid #ff1e56;
+}
+
+.logo {
+    text-align: center;
+    font-family: "Zen Dots", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #ff1e56;
+    letter-spacing: 1px;
+    flex-grow: 1;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 16px;
+  margin-top: 40px;
+}
+
+.noise-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  opacity: 0.07;
+  mix-blend-mode: screen;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  animation: grain 0.5s steps(4) infinite;
+  z-index: 0;
+}
+
+@keyframes grain {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-4px, 2px); }
+  50% { transform: translate(2px, -3px); }
+  75% { transform: translate(3px, 3px); }
+  100% { transform: translate(0, 0); }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  text-align: center;
+}
+
+.code-glow {
+  font-size: clamp(80px, 16vw, 140px);
+  font-weight: 700;
+  letter-spacing: 8px;
+  color: #ff3a6a;
+  text-shadow:
+    0 0 12px rgba(255, 60, 110, 0.8),
+    0 0 32px rgba(255, 60, 110, 0.4);
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: clamp(24px, 4vw, 34px);
+  font-weight: 600;
+  margin: 10px 0 12px;
+}
+
+.subtitle {
+  font-family: "Arimo", system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(245, 245, 245, 0.85);
+  margin: 0 auto 32px;
+  max-width: 520px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.btn.primary {
+  background: #ff1e56;
+  color: #ffffff;
+  box-shadow: 0 0 16px rgba(255, 30, 86, 0.5);
+}
+
+.btn.primary:hover {
+  background: #ff3c70;
+  transform: translateY(-1px);
+  box-shadow: 0 0 22px rgba(255, 30, 86, 0.75);
+}
+
+@media (max-width: 600px) {
+  header {
+    padding-inline: 18px;
+  }
+
+  nav {
+    right: 18px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 260px;
+  }
+}

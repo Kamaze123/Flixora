@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= film.title %></title>
+        <link rel = "stylesheet" href = "/styles/style3.css">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Zen+Dots&display=swap" rel="stylesheet">
+    </head>
+
+    <body>  
+        <header>
+            <div class="logo">Flixora</div>
+        </header>
+        
+        <% if(film){ %>
+            <div class = "title"><%= film.title %></div>
+            <div class = "box">
+            <div class = "date"><%= film.release_date %> </div>
+            <div class = "rating">Website rating : <%= film.vote_average%></div>
+            </div>
+            <img src = "https://image.tmdb.org/t/p/w500<%= film.backdrop_path %>">
+            <div class = "box2">
+            <div class = "overview"><%= film.overview %></div>
+            </div>
+        <%}else{ %>
+            <div class = "error">Movie not found</div>
+        <% } %>
+         
+    </body>
+</html>
