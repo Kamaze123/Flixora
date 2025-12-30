@@ -1,7 +1,21 @@
-# Flixora
+# Flixora - movie recommending website
 My website recommends you movies based on your mood. Basically you type out a prompt of whatever kind of movie you feel like watching and it sends back a few movies based on your prompt. 
-This website was built using html, css and javascript for the front end. The backend was done using node along with express and axios. 
-The movie data was fetched from an external API : "https://rapidapi.com/AirFU/api/ai-movie-recommender"
+
+## How to run the website
+Navigate to terminal and run : 
+`npm install express axios path fs`
+
+## How It's Made:
+Tech used: HTML, CSS, JavaScript, Node.js 
+
+I'm not talented enough to build my own movie recommending AI yet, so I used an external API for this purpose. The API I used was [this](https://rapidapi.com/AirFU/api/ai-movie-recommender).
+
 I'm a broke college student, so I was forced to used the free plan of the above API, which only allows 5 requests per day. 5 requests per day is a terrible number for any kind of a website, especially a movie website. But I really wanted to make something related to movies cuz I'm crazy about movies, hence I chose this API. 
-This project helped me to learn to work with external APIs and also understand their documentations. This also furthered my understanding of the backend of a website and how to deal with user requests as well as errors. I feel like my frontend has also gotten really better compared to my previous projects, although I haven't really applied any media queries. I probably should in the future.
-Anyways, that's enough of my yap and I hope you got to know about the thought process behind this.
+
+So basically, my website has two options, trending and custom search. Choosing the trending option gives you a list of movies which are currently trending while the custom search option asks you for some prompts and gives you movies based on your prompts. The option you choose hits up a particular API endpoint which in return gives back an JSON. I have used axios to get back results from the API. This result JSON is passed to an ejs file. 
+
+A list of movies are displayed in the ejs file along with some templating and formatting. From here, you can choose any movie you want. Clicking on a movie leads to a seperate webpage which contains the ratings, release date as well as the summary of this movie.
+
+## What I learnt:
+I learnt how to work with public APIS and their documentations. Rendering the JSON text into the ejs files were also a bit tricky, but I figured it out. I also feel like my frontend has gotten alot better compared to my previous projects. I haven't applied any media queries though. I probably should in the futue.
+
