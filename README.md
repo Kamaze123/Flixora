@@ -17,5 +17,5 @@ So basically, my website has two options, trending and custom search. Choosing t
 A list of movies are displayed in the ejs file along with some templating and formatting. From here, you can choose any movie you want. Clicking on a movie leads to a seperate webpage which contains the ratings, release date as well as the summary of this movie.
 
 ## What I learnt:
-I learnt how to work with public APIS and their documentations. Rendering the JSON text into the ejs files were also a bit tricky, but I figured it out. I also feel like my frontend has gotten alot better compared to my previous projects. I haven't applied any media queries though. I probably should in the futue.
+I learnt how to work with public APIS and their documentations. Rendering the JSON text into the ejs files were also a bit tricky, but I figured it out. I haven't applied any media queries though. I probably should in the futue.
 
